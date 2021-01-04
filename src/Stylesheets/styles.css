@@ -1,0 +1,252 @@
+.nav-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-image: url("https://wallpaperaccess.com/thumb/1268183.jpg");
+  border-bottom: solid 7px goldenrod;
+}
+
+.nav-container .title {
+  color: goldenrod;
+  font-size: 2.5rem;
+}
+
+.nav-container img {
+  height: 270px;
+}
+
+.nav-container nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 18%;
+}
+
+.nav-container nav .nav-links {
+  margin: 10px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.3rem;
+  text-decoration: none;
+  color: white;
+  background: goldenrod;
+  border-radius: 15px;
+  -webkit-box-shadow: 5px 5px #886715;
+          box-shadow: 5px 5px #886715;
+  width: 200px;
+  padding: 10px;
+}
+
+.nav-container nav .nav-links:hover {
+  cursor: pointer;
+  -webkit-animation: navlink 0.1s  ease-in-out forwards;
+          animation: navlink 0.1s  ease-in-out forwards;
+}
+
+@-webkit-keyframes navlink {
+  100% {
+    -webkit-transform: translateX(4px) translateY(4px);
+            transform: translateX(4px) translateY(4px);
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    background: royalblue;
+    color: goldenrod;
+  }
+}
+
+@keyframes navlink {
+  100% {
+    -webkit-transform: translateX(4px) translateY(4px);
+            transform: translateX(4px) translateY(4px);
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    background: royalblue;
+    color: goldenrod;
+  }
+}
+
+@media (max-width: 1200px) {
+  .nav-container .title {
+    font-size: 2rem;
+  }
+  .nav-container img {
+    height: 148px;
+  }
+  .nav-container nav .nav-links {
+    font-size: .9rem;
+    width: 90px;
+    height: 35px;
+  }
+  .nav-container nav .nav-links:hover {
+    -webkit-animation: navlink 0.1s 2 ease-in-out alternate;
+            animation: navlink 0.1s 2 ease-in-out alternate;
+  }
+}
+
+@media (max-width: 600px) {
+  .nav-container {
+    height: 100px;
+  }
+  .nav-container .title {
+    white-space: nowrap;
+    font-size: 1rem;
+  }
+  .nav-container img {
+    height: 0px;
+  }
+  .nav-container nav {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 50%;
+  }
+  .nav-container nav .nav-links {
+    font-size: .6rem;
+    width: 50px;
+    height: 20px;
+    margin: 15px auto;
+    padding: 8px;
+    -webkit-box-shadow: 3px 3px #886715;
+            box-shadow: 3px 3px #886715;
+  }
+  .nav-container nav .nav-links:hover {
+    -webkit-animation: navlink 0.1s 2 ease-in-out alternate;
+            animation: navlink 0.1s 2 ease-in-out alternate;
+  }
+}
+
+.contact-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  height: 100vh;
+  background: royalblue;
+}
+
+.contact-form form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 50px;
+  margin-top: 50px;
+  height: 600px;
+  border: solid goldenrod 5px;
+  border-radius: 10px;
+  background: navy;
+}
+
+.contact-form form textarea {
+  border-radius: 10px;
+  resize: none;
+  border: solid goldenrod 2px;
+  padding: 10px;
+  font-size: 1.2rem;
+  font-family: inherit;
+  width: 500px;
+  height: 300px;
+}
+
+.contact-form form textarea:focus {
+  outline: none;
+}
+
+.contact-form form input {
+  border: solid goldenrod 2px;
+  border-radius: 10px;
+  font-size: 1rem;
+  height: 30px;
+  padding: 10px;
+  width: 300px;
+  margin: 10px auto;
+}
+
+.contact-form form input:focus {
+  outline: none;
+}
+
+.contact-form form button {
+  width: 100px;
+  height: 50px;
+  border-radius: 10px;
+  outline: none;
+  border: solid goldenrod 2px;
+}
+
+.contact-form form button:hover {
+  background: #adadad;
+  cursor: pointer;
+}
+
+@media (max-width: 1200px) {
+  .contact-form form {
+    height: 450px;
+    width: 400px;
+  }
+  .contact-form form textarea {
+    margin: 20px auto;
+    width: 300px;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact-form form {
+    height: 350px;
+    width: 180px;
+  }
+  .contact-form form input {
+    font-size: 0.8rem;
+    height: 40px;
+    width: 150px;
+  }
+  .contact-form form textarea {
+    font-size: 0.8rem;
+    margin: 10px auto;
+    width: 150px;
+  }
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+}
+/*# sourceMappingURL=styles.css.map */
