@@ -1,0 +1,138 @@
+@import "./project.scss";
+@import "./nav";
+
+html {
+  width: inherit;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  background: #313142;
+  margin: 0;
+}
+
+.two-column-split {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  font-weight: 900;
+  font-size: 0.55em;
+  line-height: 1.3em;
+  letter-spacing: 0.03em;
+  ul {
+    width: 50%;
+  }
+  li {
+    text-align: center;
+    margin: 5px;
+    width: 80%;
+    color: #fff;
+  }
+}
+
+#homepage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  #bio {
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    animation: bio 1s ease-in-out forwards;
+    #info {
+      padding: 15px;
+      height: 500px;
+      text-align: center;
+      font-size: 1.2rem;
+      line-height: 2.5;
+    }
+    #title {
+      font-size: 1.3rem;
+      color: rgb(140, 59, 194);
+    }
+  }
+  #projects-container {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: wrap column;
+  }
+}
+
+@keyframes bio {
+  to {
+    opacity: 1;
+  }
+}
+
+//Tablet media query
+@media (min-width: 550px) and (max-width: 900px) {
+  .two-column-split {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    font-weight: 900;
+    font-size: 0.8em;
+    line-height: 2;
+    ul {
+      width: 50%;
+    }
+    li {
+      text-align: center;
+      margin: 10px auto;
+      width: 60%;
+      color: #fff;
+    }
+  }
+
+  #homepage {
+    #bio {
+      #info {
+        width: 75%;
+        height: 750px;
+        font-size: 1.6rem;
+      }
+      #title {
+        font-size: 1.7rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 1000px) {
+  .two-column-split {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    font-weight: 900;
+    font-size: 1.2em;
+    line-height: 2;
+    ul {
+      width: 50%;
+    }
+    li {
+      text-align: center;
+      margin: 10px auto;
+      width: 50%;
+      color: #fff;
+    }
+  }
+  #homepage {
+    #bio {
+      #info {
+        width: 60%;
+        font-size: 2.2rem;
+      }
+      #title {
+        font-size: 2.3rem;
+      }
+    }
+  }
+}
