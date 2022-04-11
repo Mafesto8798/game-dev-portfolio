@@ -7,7 +7,7 @@ export default function Nav() {
         <a className="nav-links" href="#homepage">
           <h3>Home</h3>
         </a>
-        <a className="nav-links" href="#projects-container">
+        <a className="nav-links" href="#project-anchor">
           <h3>Projects</h3>
         </a>
         <a className="nav-links" href="#contact">

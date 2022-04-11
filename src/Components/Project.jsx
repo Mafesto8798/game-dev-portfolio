@@ -14,20 +14,18 @@ export default function Project({
 }) {
   return (
     <>
-      <div className="project-container">
+      <div className="project-container reveal">
         <h1 id="project-title">{title}</h1>
         <a href={thumbnail} target="_blank" rel="noreferrer">
           <img src={thumbnail} alt="screenshot" id="project-thumbnail" />
         </a>
-        <section className="two-column-split">
+        <section className="project-features">
           <ul>
-            {features1.map((feature) => (
-              <li>{feature}</li>
+            {features1.map((feature, key) => (
+              <li key={key}>{feature}</li>
             ))}
-          </ul>
-          <ul>
-            {features2.map((feature) => (
-              <li>{feature}</li>
+            {features2.map((feature, key) => (
+              <li key={key}>{feature}</li>
             ))}
           </ul>
         </section>

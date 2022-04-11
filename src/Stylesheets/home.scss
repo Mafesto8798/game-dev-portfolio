@@ -1,31 +1,27 @@
-@import "./project.scss";
 @import "./nav";
 
 html {
+  font-size: 16px;
   width: inherit;
   font-family: "Montserrat", sans-serif;
 }
 
 body {
-  background: #313142;
+  background: rgb(34, 38, 44);
   margin: 0;
 }
 
-.two-column-split {
+.project-features {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: row;
-  font-weight: 900;
-  font-size: 0.55em;
-  line-height: 1.1rem;
+  flex-direction: column;
+  margin: 30px auto;
+  font-size: 0.8em;
+  line-height: 1.5rem;
   letter-spacing: 0.03rem;
-  ul {
-    width: 50%;
-  }
   li {
-    text-align: center;
-    margin: 5px;
+    margin: 0 auto;
     width: 80%;
     color: #fff;
   }
@@ -33,35 +29,64 @@ body {
 
 #homepage {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
+  flex-direction: column;
   height: 100vh;
+  #arrow {
+    opacity: 0;
+    height: 50px;
+    text-decoration: none;
+    color: #5eb93e;
+    animation: swoop 1s ease-in-out forwards,
+      grow 1s ease-in-out infinite alternate;
+  }
   #bio {
     opacity: 0;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    color: white;
+    color: #5eb93e;
     animation: bio 1s ease-in-out forwards;
     #info {
       padding: 15px;
-      height: 500px;
+      height: 300px;
       text-align: center;
-      font-size: 1.2rem;
-      line-height: 2.5;
+      font-size: 2rem;
+      line-height: 1.2;
     }
     #title {
-      font-size: 1.3rem;
-      color: rgb(140, 59, 194);
+      font-size: 1rem;
+      color: #707070;
     }
   }
   #projects-container {
     width: 70%;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     flex-flow: wrap column;
   }
+}
+.reveal {
+  position: relative;
+  transform: translateY(30px);
+  opacity: 0;
+  transition: 1s all ease;
+  &.active {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+footer {
+  font-size: 0.8rem;
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: rgb(30, 34, 39);
+  color: #5eb93e;
 }
 
 @keyframes bio {
@@ -70,8 +95,22 @@ body {
   }
 }
 
-//Tablet media query
-@media (min-width: 550px) and (max-width: 900px) {
+@keyframes swoop {
+  to {
+    opacity: 1;
+    margin-top: 0;
+  }
+}
+@keyframes grow {
+  100% {
+    transform: translateY(-20px);
+  }
+}
+
+@media (min-width: 700px) {
+  html {
+    font-size: 24px;
+  }
   .two-column-split {
     display: flex;
     justify-content: center;
@@ -94,25 +133,29 @@ body {
   #homepage {
     #bio {
       #info {
-        width: 75%;
+        width: 100%;
         height: 750px;
-        font-size: 1.6rem;
+        font-size: 2rem;
       }
       #title {
-        font-size: 1.7rem;
+        font-size: 1rem;
       }
     }
   }
 }
 
-@media (min-width: 1000px) {
+//Tablets
+@media (min-width: 900px) {
+  html {
+    font-size: 28px;
+  }
   .two-column-split {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row;
     font-weight: 900;
-    font-size: 1.2em;
+    font-size: 1em;
     line-height: 2;
     ul {
       width: 50%;
@@ -127,12 +170,63 @@ body {
   #homepage {
     #bio {
       #info {
-        width: 60%;
-        font-size: 2.2rem;
+        width: 100%;
+        font-size: 2rem;
       }
       #title {
-        font-size: 2.3rem;
+        font-size: 1.3rem;
       }
+    }
+  }
+}
+
+//Laptops
+@media (orientation: landscape) and (min-width: 1000px) {
+  html {
+    font-size: 18px;
+  }
+  #homepage {
+    height: 100%;
+    #bio {
+      #info {
+        height: 60vh;
+        width: 100%;
+        font-size: 2rem;
+      }
+      #title {
+        font-size: 1.3rem;
+      }
+    }
+  }
+}
+
+//Desktop
+@media (min-width: 1200px) {
+  html {
+    font-size: 36px;
+  }
+  .reveal {
+    transform: translateY(150px);
+  }
+  #homepage {
+    height: 100%;
+    #arrow {
+      height: 120px;
+    }
+    #bio {
+      #info {
+        height: 60vh;
+        width: 100%;
+        font-size: 2rem;
+      }
+      #title {
+        font-size: 1.3rem;
+      }
+    }
+  }
+  @keyframes grow {
+    100% {
+      transform: translateY(-70px);
     }
   }
 }

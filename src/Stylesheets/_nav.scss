@@ -4,7 +4,7 @@
   top: 0;
   height: 7vh;
   width: 100%;
-  background: #262534;
+  background: rgb(42, 47, 54);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -15,13 +15,14 @@
     .nav-links {
       text-align: center;
       text-decoration: none;
-      color: white;
+      color: #707070;
       margin: 0 20px;
       padding: 10px;
       font-size: 0.8rem;
+      transition: color 0.5s ease-in-out;
       &:hover {
         cursor: pointer;
-        color: rgb(140, 59, 194);
+        color: #5eb93e;
       }
     }
   }
