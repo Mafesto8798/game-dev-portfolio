@@ -181,15 +181,15 @@ footer {
 }
 
 //Laptops
-@media (orientation: landscape) and (min-width: 1000px) {
+@media (orientation: landscape) and (min-width: 800px) {
   html {
-    font-size: 18px;
+    font-size: 24px;
   }
   #homepage {
     height: 100%;
     #bio {
       #info {
-        height: 60vh;
+        height: 70vh;
         width: 100%;
         font-size: 2rem;
       }
@@ -201,7 +201,7 @@ footer {
 }
 
 //Desktop
-@media (min-width: 1200px) {
+@media (min-width: 1200px) and (min-height: 1200px) {
   html {
     font-size: 36px;
   }

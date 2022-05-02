@@ -71,7 +71,29 @@
   }
 }
 
-@media (orientation: landscape) and (min-width: 1000px) {
+@media (orientation: landscape) and (min-width: 800px) {
+  .project-container {
+    margin-bottom: 100vh;
+  }
+  .project-container #project-title {
+    font-size: 1rem;
+  }
+  .project-container #project-thumbnail {
+    max-width: 40vw;
+  }
+  .project-container .project-features {
+    font-size: 0.6rem;
+  }
+  .project-container #screenshot-gallery .project-screenshot {
+    width: 100px;
+  }
+  .project-container #project-description {
+    width: 50%;
+    font-size: 0.8rem;
+  }
+}
+
+@media (min-width: 1200px) and (min-height: 1200px) {
   .project-container {
     margin-bottom: 100vh;
   }
@@ -85,27 +107,8 @@
     width: 200px;
   }
   .project-container #project-description {
-    width: 80%;
-    font-size: 0.8rem;
-  }
-}
-
-@media (min-width: 1200px) {
-  .project-container {
-    margin-bottom: 100vh;
-  }
-  .project-container #project-title {
-    font-size: 1.2rem;
-  }
-  .project-container #project-thumbnail {
-    width: 60vw;
-  }
-  .project-container #screenshot-gallery .project-screenshot {
-    width: 200px;
-  }
-  .project-container #project-description {
-    width: 60%;
-    font-size: 0.8rem;
+    width: 50%;
+    font-size: 0.6rem;
   }
 }
 /*# sourceMappingURL=project.css.map */

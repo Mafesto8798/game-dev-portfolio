@@ -58,8 +58,31 @@
   }
 }
 
-//Laptops
-@media (orientation: landscape) and (min-width: 1000px) {
+@media (orientation: landscape) and (min-width: 800px) {
+  .project-container {
+    margin-bottom: 100vh;
+    #project-title {
+      font-size: 1rem;
+    }
+    #project-thumbnail {
+      max-width: 40vw;
+    }
+    .project-features {
+      font-size: 0.6rem;
+    }
+    #screenshot-gallery {
+      .project-screenshot {
+        width: 100px;
+      }
+    }
+    #project-description {
+      width: 50%;
+      font-size: 0.8rem;
+    }
+  }
+}
+
+@media (min-width: 1200px) and (min-height: 1200px) {
   .project-container {
     margin-bottom: 100vh;
     #project-title {
@@ -74,30 +97,8 @@
       }
     }
     #project-description {
-      width: 80%;
-      font-size: 0.8rem;
-    }
-  }
-}
-
-//Desktop
-@media (min-width: 1200px) {
-  .project-container {
-    margin-bottom: 100vh;
-    #project-title {
-      font-size: 1.2rem;
-    }
-    #project-thumbnail {
-      width: 60vw;
-    }
-    #screenshot-gallery {
-      .project-screenshot {
-        width: 200px;
-      }
-    }
-    #project-description {
-      width: 60%;
-      font-size: 0.8rem;
+      width: 50%;
+      font-size: 0.6rem;
     }
   }
 }
